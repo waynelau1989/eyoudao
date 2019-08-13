@@ -2,18 +2,20 @@
 goldendict词典的有道扩展程序  
 基于windows有道词典的5.1.38.3211版本  
 
-## 安装
+## 编译
+### Linux
 	sudo apt-get install goldendict
 	sudo apt-get install libxml2-dev
 	sudo apt-get install libxslt1-dev
 
+### macOS
+	brew install libxml2
+	brew install libxslt
+	brew install coreutil
+
 	git clone https://github.com/Onway/eyoudao.git
 	cd eyoudao
-	sudo ./install
-
-## 卸载
-	cd /opt/eyoudao
-	sudo ./uninstall
+	make
 
 ## 配置
 在goldendict的Edit - Dictionaries加入如下配置：  

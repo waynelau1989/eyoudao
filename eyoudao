@@ -1,5 +1,17 @@
 #!/bin/bash
 
+OS=`uname`
+
+if [ "$OS" == "Darwin" ];then
+	READLINK="/usr/local/bin/greadlink"
+else
+	READLINK="readlink"
+fi
+
+SELF=`"$READLINK" -f $0`
+SELF_DIR=`dirname $SELF`
+WORK_DIR=$SELF_DIR
+
 xmldetail="http://dict.youdao.com/search?keyfrom=deskdict.main&xmlDetail=true&doctype=xml&xmlVersion=8.1&dogVersion=1.0&client=deskdict&appVer=5.1.38.3211&appZengqiang=0&le=eng&xslVer=3.0&LTH=251&q="
 xsldetail="detail/result.xsl"
 xmlsimple="http://dict.youdao.com/fsearch?q="
@@ -10,7 +22,7 @@ if [ $# != 2 ] ; then
 	exit 1
 fi
 
-cd /opt/eyoudao
+cd $WORK_DIR
 
 if [ "$1" == "-detail" ] ; then
 	./xslt "-xmlapi" "$xmldetail" "-xslapi" "$xsldetail" "-keyword" "$2"

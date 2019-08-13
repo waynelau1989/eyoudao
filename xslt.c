@@ -36,10 +36,10 @@ check_argument(int argc,char *argv[])
 			QUERYWORD = xmlPathToURI((const xmlChar*)argv[i]);
 		} else if (strcmp(argv[i],"-xmlapi") == 0) {
 			++i;
-			XMLAPI = argv[i];
+			XMLAPI = (xmlChar*)argv[i];
 		} else if (strcmp(argv[i],"-xslapi") == 0) {
 			++i;
-			XSLAPI = argv[i];
+			XSLAPI = (xmlChar*)argv[i];
 		} else {
 			xmlFree(QUERYWORD);
 			printf("eyoudao check_argument unknow argument!\n");
