@@ -27,6 +27,7 @@ goldendict词典的有道扩展程序
 
 ## BUGS
 * windows的有道辞典早已不是5.1版本了，xsl文件已经很旧了，所幸xml格式和api接口都没变。
+* macOS上只能显示纯文本
 
 ## 版权
 * xml数据和各种xsl,js,css,png文件都是修改或源自windows的有道词典安装文件。  
