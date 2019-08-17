@@ -34,7 +34,7 @@ goldendict词典的有道扩展程序
 
 ### macOS发音没有声音
 在/Applications/GoldenDict.app/Contents/Info.plist中添加如下内容
-![image](https://github.com/Onway/eyoudao/raw/master/img/mod_plist.png)
+![image](https://github.com/waynelau1989/eyoudao/raw/master/img/mod_plist.png)
 
 ## 效果图
 ![image](https://github.com/Onway/eyoudao/raw/master/img/preview.png)
