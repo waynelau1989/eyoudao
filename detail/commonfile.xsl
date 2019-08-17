@@ -62,7 +62,7 @@
 		<xsl:attribute name="id">noSound<xsl:value-of select="$objId"/></xsl:attribute>
 		<xsl:attribute name="style">display:none</xsl:attribute>
 		<a href="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" target="_blank">
-			<IMG SRC="file:///opt/eyoudao/detail/images/nosound.gif" WIDTH="17" HEIGHT="17" BORDER="0" ALT="想启用英文朗读功能吗？请先安装flash插件！" align="absmiddle" />
+			<IMG SRC="file:///INSTALL_DIR/eyoudao/detail/images/nosound.gif" WIDTH="17" HEIGHT="17" BORDER="0" ALT="想启用英文朗读功能吗？请先安装flash插件！" align="absmiddle" />
 		</a>
 	</xsl:element>
 	</xsl:if>
@@ -269,7 +269,7 @@
               javascript:ctlog(this, '<xsl:call-template name="standard_return_phrase" />', '0', '<xsl:value-of select="/yodaodict/keyfrom"/>', 0, 'CLICK', "<xsl:value-of select="$ctype_title" />")
             </xsl:attribute>
             <xsl:value-of select="$key" />
-			<img src="file:///opt/eyoudao/detail/images/outlink.gif" border="0"/>
+			<img src="file:///INSTALL_DIR/eyoudao/detail/images/outlink.gif" border="0"/>
           </xsl:element>
         </xsl:when>
         <xsl:otherwise>
@@ -307,7 +307,7 @@
                   javascript:ctlog(this, '<xsl:call-template name="standard_return_phrase" />', '0', '<xsl:value-of select="/yodaodict/keyfrom"/>', 0, 'CLICK', "<xsl:value-of select="$ctype_external" />")
                 </xsl:attribute>
                 <xsl:value-of select="external-link/name" />
-				<img src="file:///opt/eyoudao/detail/images/outlink.gif" border="0"/>
+				<img src="file:///INSTALL_DIR/eyoudao/detail/images/outlink.gif" border="0"/>
               </xsl:element>
             </xsl:when>
             <xsl:otherwise>
@@ -726,7 +726,7 @@
 		
 			<xsl:if test="similar-words">
 				<div class="attr">
-					<IMG SRC="file:///opt/eyoudao/detail/images/pointd.gif" WIDTH="5" HEIGHT="5" BORDER="0" ALT="" align="absmiddle"/>
+					<IMG SRC="file:///INSTALL_DIR/eyoudao/detail/images/pointd.gif" WIDTH="5" HEIGHT="5" BORDER="0" ALT="" align="absmiddle"/>
 				<font class="dot">. </font>
 				<B>近义词或词组</B>
 			  </div>		
@@ -761,7 +761,7 @@
 						<xsl:element name="span">
 							<xsl:attribute name="id">showmoreSimwords</xsl:attribute>
 							<font class="dot"> . </font>
-							<IMG SRC="file:///opt/eyoudao/detail/images/dictrstarbu.gif" WIDTH="4" HEIGHT="8" BORDER="0" ALT="展开" align="absmiddle"/>
+							<IMG SRC="file:///INSTALL_DIR/eyoudao/detail/images/dictrstarbu.gif" WIDTH="4" HEIGHT="8" BORDER="0" ALT="展开" align="absmiddle"/>
 							<xsl:element name="a">
 		  	 				<xsl:attribute name="href">javascript:void(0)</xsl:attribute>
 			   				<xsl:attribute name="title">点击查看更多的近义词</xsl:attribute>
@@ -774,7 +774,7 @@
 							<xsl:attribute name="id">hidemoreSimwords</xsl:attribute>
 							<xsl:attribute name="style">display:none</xsl:attribute>
 							<font class="dot"> . </font>
-							<IMG SRC="file:///opt/eyoudao/detail/images/dictlstarbu.gif" WIDTH="4" HEIGHT="8" BORDER="0" ALT="隐藏更多" align="absmiddle"/>
+							<IMG SRC="file:///INSTALL_DIR/eyoudao/detail/images/dictlstarbu.gif" WIDTH="4" HEIGHT="8" BORDER="0" ALT="隐藏更多" align="absmiddle"/>
 							<xsl:element name="a">
 		  	 				<xsl:attribute name="href">javascript:void(0)</xsl:attribute>
 		   					<xsl:attribute name="class">blue12other</xsl:attribute>
@@ -832,7 +832,7 @@
 		</xsl:if>
 		<xsl:if test="count(../i) &gt; 1">
 			<xsl:if test="not(f)">
-				<img src="file:///opt/eyoudao/detail/images/displaypoint.gif" alt="" width="13" align="absmiddle" border="0" height="20" />
+				<img src="file:///INSTALL_DIR/eyoudao/detail/images/displaypoint.gif" alt="" width="13" align="absmiddle" border="0" height="20" />
       </xsl:if>
      
 		</xsl:if>
@@ -1819,7 +1819,7 @@
 									<xsl:attribute name="src"><xsl:value-of select="snippets/snippet/imageUrl"/></xsl:attribute>
 									<xsl:attribute name="alt">点击播放</xsl:attribute>
 								</xsl:element>
-								<span class="playicon"><img src="file:///opt/eyoudao/detail/css/play.png"/></span>
+								<span class="playicon"><img src="file:///INSTALL_DIR/eyoudao/detail/css/play.png"/></span>
 							</a>
 							<a href="javascript:void(0);" class="close"></a>
 						</div>

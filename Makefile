@@ -1,10 +1,10 @@
 
-CFLAGS		:=
-LDFLAGS		:=
-INCLUDES	:=
-LIBS		:=
-LIB_PATHS	:=
-OBJ_NAME	:= xslt
+CFLAGS			:=
+LDFLAGS			:=
+INCLUDES		:=
+LIBS			:=
+LIB_PATHS		:=
+OBJ_NAME		:= xslt
 
 ifeq ($(shell uname),Darwin)
 	INCLUDES	+= /usr/local/opt/libxml2/include/libxml2
@@ -29,3 +29,6 @@ all:$(OBJ_NAME)
 
 clean:
 	rm xslt
+
+install:$(OBJ_NAME)
+	@./install.sh

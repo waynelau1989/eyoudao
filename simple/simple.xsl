@@ -23,7 +23,7 @@
 					}
 
 					#voice {
-						background: url("file:///opt/eyoudao/simple/new-sprite.png") no-repeat scroll 0 0 transparent;
+						background: url("file:///INSTALL_DIR/eyoudao/simple/new-sprite.png") no-repeat scroll 0 0 transparent;
 						background-position: -188px -132px;
 						display: inline-block;
 						height: 18px;

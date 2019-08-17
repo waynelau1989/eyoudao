@@ -8,8 +8,8 @@
 				<!--link href="css/default.css" rel="stylesheet" type="text/css"/-->
 				<!--<link href="css/new.css" rel="stylesheet" type="text/css"/>-->
 				<!--<script language="javascript" src="js/default.js"/>-->
-				<link href="file:///opt/eyoudao/detail/css/default.css" rel="stylesheet" type="text/css"/>
-				<script language="javascript" src="file:///opt/eyoudao/detail/js/default.js"/>
+				<link href="file:///INSTALL_DIR/eyoudao/detail/css/default.css" rel="stylesheet" type="text/css"/>
+				<script language="javascript" src="file:///INSTALL_DIR/eyoudao/detail/js/default.js"/>
 			</head>
 			<body>
 	<!--

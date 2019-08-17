@@ -2,7 +2,7 @@
 goldendict词典的有道扩展程序  
 基于windows有道词典的5.1.38.3211版本  
 
-## 编译
+## 编译&安装
 ### Linux
 	sudo apt-get install goldendict
 	sudo apt-get install libxml2-dev
@@ -16,9 +16,11 @@ goldendict词典的有道扩展程序
 	git clone https://github.com/Onway/eyoudao.git
 	cd eyoudao
 	make
+	make install INSTALL_DIR=/path_to_install
 
 ## 配置
-在goldendict的Edit - Dictionaries加入如下配置：  
+**请使用绝对路径**
+在goldendict的Edit - Dictionaries加入如下配置：
 ![image](https://github.com/Onway/eyoudao/raw/master/img/setting.png)  
 如果启用了多个eyoudao的扩展程序，可能要分别添加词典分组，否则css布局可能会相互影响。
 
@@ -27,7 +29,6 @@ goldendict词典的有道扩展程序
 
 ## BUGS
 * windows的有道辞典早已不是5.1版本了，xsl文件已经很旧了，所幸xml格式和api接口都没变。
-* macOS上只能显示纯文本
 
 ## 版权
 * xml数据和各种xsl,js,css,png文件都是修改或源自windows的有道词典安装文件。  
