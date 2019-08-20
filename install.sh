@@ -2,6 +2,13 @@
 
 OS=`uname`
 
+CMD_CP="cp -rdvf"
+CMD_SED="sed -i"
+
+if [ "$OS" == "Darwin" ];then
+	CMD_CP="/bin/cp -Rvf"
+	CMD_SED="/usr/bin/sed -i \"\" -e"
+fi
 
 INSTALL_FILES="detail simple pyfanyi eyoudao xslt"
 
@@ -19,14 +26,9 @@ if [ ! -d "$DEST_DIR" ];then
 	mkdir -p "$DEST_DIR"
 fi
 
-if [ "$OS" == "Darwin" ];then
-	/bin/cp -Rvf $INSTALL_FILES $DEST_DIR
-	/usr/bin/sed -i "" -e 's|\/INSTALL_DIR|'"${INSTALL_DIR}"'|g' $DEST_DIR/detail/commonfile.xsl
-	/usr/bin/sed -i "" -e 's|\/INSTALL_DIR|'"${INSTALL_DIR}"'|g' $DEST_DIR/detail/result.xsl
-	/usr/bin/sed -i "" -e 's|\/INSTALL_DIR|'"${INSTALL_DIR}"'|g' $DEST_DIR/simple/simple.xsl
-else
-	cp -rdvf $INSTALL_FILES $DEST_DIR
-	sed -i "s/\/INSTALL_DIR/${INSTALL_DIR}/g" $DEST_DIR/detail/commonfile.xsl
-	sed -i "s/\/INSTALL_DIR/${INSTALL_DIR}/g" $DEST_DIR/detail/result.xsl
-	sed -i "s/\/INSTALL_DIR/${INSTALL_DIR}/g" $DEST_DIR/simple/simple.xsl
-fi
+
+$CMD_CP $INSTALL_FILES $DEST_DIR
+$CMD_SED 's|\/INSTALL_DIR|'"${INSTALL_DIR}"'|g' $DEST_DIR/detail/commonfile.xsl
+$CMD_SED 's|\/INSTALL_DIR|'"${INSTALL_DIR}"'|g' $DEST_DIR/detail/result.xsl
+$CMD_SED 's|\/INSTALL_DIR|'"${INSTALL_DIR}"'|g' $DEST_DIR/simple/simple.xsl
+
